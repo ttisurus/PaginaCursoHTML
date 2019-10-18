@@ -1,0 +1,183 @@
+/* Fuentes de Google!
+Ingresando en https://fonts.google.com/ podemos seleccionar una fuente que nos guste.
+Hacemos click en el signo +
+Hacemos click en la solapa inferior que se crea y luego un click sobre @IMPORT
+Copiamos y pegamos ese codigo...
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+* {
+    /* Ahora indicamos que todos los elementos HTML usen esa fuente*/
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    /* nuestro cuerpo tendra fondo blanco y sin margenes*/
+    background-color: #ffffff;
+    margin: 0;
+}
+
+h1, h2, h3 {
+    /* defino para varios selectores este conjuto de propiedades. */
+    text-align: center;
+}
+
+a {
+    /* los link no tendras el subrayado por defecto y tendran un texto color gris*/
+    text-decoration: none;
+    color: #333;
+}
+
+#navbar {
+    /* Nuestra barra de navegacion tenra color blanco de fondo.
+    Dibujemos un borde inferior con el mismo color de la fuente */
+    background-color: #ffffff;
+    color: #146e83;
+    border-bottom: 2px solid #146e83;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    margin: 0;
+}
+
+section {
+    /* Cada seccion tendra un espaciado interno superior */
+    padding-top: 5.5rem;
+}
+
+section > h2 {
+    /* Los titulos de h2, adentro de cada section tendran estos estilos */
+    width: 100%;
+    background-color: #146e83;
+    padding: .75rem 0;
+    color: #ffffff;
+    margin-top: 1rem;
+}
+
+footer {
+    /* Estilos para el pie */
+    background-color: #146e83;
+    padding: .75rem 0;
+    color: #ffffff;
+    margin-top: 4rem;
+}
+
+.flex66 {
+    width: 66%;
+}
+
+.flex50 {
+    width: 50%;
+}
+
+.flex33 {
+    width: 33%;
+}
+
+.flex66 > img, .flex50 > img, .flex33 > img {
+    /* las imagenes adentro de cada elemento contenedor ocuparan todo el ancho*/
+    width: 100%;
+}
+
+.flex66 > p, .flex50 > p, .flex33 > p {
+    /* los parrafos tendra un relleno interno */
+    padding: 1rem;
+}
+
+.imgWork {
+    /* transformamos las imagenes de trabajo a tono de grises. */
+    filter: grayscale(100%);
+}
+
+.imgWork:hover {
+    /* Y cuando pasamos por arriba, se muestran en color. */
+    filter: grayscale(0%);
+}
+
+@media (max-width:640px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin: 0 3rem;
+        z-index: 1;
+    }
+
+    .flex33, .flex50, .flex66 {
+        /* al disponerse en columna, haremos que ocupen todo el ancho */
+        width: 100%;
+    }
+
+    #navbar {
+        flex-direction: row;
+    }
+
+    #navbar > .flex50 {
+        width: 50%;
+    }
+}
+
+@media (min-width:640px) {
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        margin: 0 3rem;
+        z-index: 1;
+    }
+}
+
+.bordeNegro {
+    border: 2px solid #000000;
+}
+
+.bordeRojo {
+    border: 2px solid #FF0000;
+}
+
+/* Manejo del menu */
+
+.menu { display: none; }
+#overlay{margin:0 auto; width:30px;display:block;margin-top:5px;
+position: relative;background-color: #ffffff;height: 35px;padding: 10px;z-index: 10;}
+.icon{background-color: #000000;width: 30px;margin-top: 5px;height: 5px;position: absolute;}
+.icon::before, .icon::after{content:'';background-color: #000000;width: 30px;height: 5px;position: absolute;}
+.icon::before{top:10px;}
+.icon::after{top: 20px;}
+.menu{background-color: rgba(0,0,0,0.7);background-position: center center; width: 100%;
+height: 100vh;margin: 0 auto;position: absolute;top: 0;left: 0;right: 0;}
+.menu ul{list-style: none;padding: 0;margin-top: 150px;}
+.menu li a {display:block;text-decoration: none;color: #ffffff;font-weight: bold;font-size: 1.8rem;
+text-align: right;padding: 15px;}
+.menu li a:hover {color:#cccccc; }
+
+/* FORM */
+button, input, textarea {
+    width: 94%;
+    margin: .875rem 3%;
+}
+
+button {
+    height: 3rem;
+    width: 94%;
+    margin: .875rem 3%;
+    border-radius: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #146e83;
+    font-size: 1rem;
+}
+
+input, textarea {
+    height: 1.8rem;
+    border: 2px solid #000000;
+    border-radius: .5rem;
+    font-size: 1rem;
+}
+
+#message {
+    padding-top: .5rem;
+}
